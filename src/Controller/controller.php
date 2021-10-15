@@ -13,7 +13,7 @@ class controller extends AbstractController
         $number = random_int(0, 100);
 
         return new Response(
-            'hello world!'
+            'hello mahdi!'
         );
     }
     /**
