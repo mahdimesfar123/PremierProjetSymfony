@@ -34,7 +34,7 @@ class controller extends AbstractController
     public function number2($max): Response
     {
       if (!is_numeric($max)){
-        throw new HttpException(404, 'On ne peut pas vous afficher cette page');
+        throw new HttpException(404, 'valeur incorrecte (nulle ou alphabétique) du paramètre de substitution {max}.');
       }
       
       $number = random_int(0, $max);
