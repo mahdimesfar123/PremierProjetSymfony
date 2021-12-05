@@ -9,7 +9,10 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class controller extends AbstractController
 {
-    public function index(): Response
+  /**
+      * @Route("/", name="home_route")
+     */  
+  public function index(): Response
     {
         $number = random_int(0, 100);
 

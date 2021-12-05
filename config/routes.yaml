@@ -1,6 +1,12 @@
-index:
-    path: /
-    controller: App\Controller\controller::index
+#index:
+    #path: /
+    #controller: App\Controller\controller::index
 app_lucky_number:
     path: /luky/number
     controller: App\Controller\LukyController::number
+movie:
+    path: /movies
+    controller: App\Controller\TaskController::index
+# article:
+    # path: /articles
+    # controller: App\Controller\ArticlesController::index

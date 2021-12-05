@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <form method="POST">
+    <label for="mname">Movie name:</label><br>
+    <input type="text" id="mname" name="mname"><br>
+    <label for="cars">Choose a Start time hour:</label><br>
+    <select name="hour" id="hour" form="movieform">
+        <option value="8-9">8-9 PM</option>
+        <option value="9-10">9-10 PM</option>
+        <option value="10-11">10-11 PM</option>
+        <option value="11-12">11-12 PM</option>
+    </select><br>
+    <label for="cars">Choose an End time hour:</label><br>
+    <select name="hour" id="hour" form="movieform">
+        <option value="8-9">8-9 PM</option>
+        <option value="9-10">9-10 PM</option>
+        <option value="10-11">10-11 PM</option>
+        <option value="11-12">11-12 PM</option>
+    </select><br>
+    <label for="movieroom">Movie room number:</label><br>
+    <select name="movieroom" id="movieroom" form="movieroom">
+        <option value="MR1">MR1</option>
+        <option value="MR2">MR2</option>
+        <option value="MR3">MR3</option>
+        <option value="MR4">MR4</option>
+        <option value="MR5">MR5</option>
+    </select><br>
+    <input type="submit" value="Submit">
+    </form>
+    <table border="1px solid black" style="width:100%">
+    <tr>
+        <th></th>
+        <th>MR1</th>
+        <th>MR2</th>
+        <th>MR3</th>
+        <th>MR4</th>
+        <th>MR5</th>
+    </tr>
+    <tr>
+        <th>8 - 9 PM</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>9 - 10 PM</th>
+        <th><?php echo $_GET["mname"]; ?></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>10 - 11 PM</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>11 - 12 PM</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </table>
+</div>
+{% endblock %}
