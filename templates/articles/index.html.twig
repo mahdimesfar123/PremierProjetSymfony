@@ -12,8 +12,9 @@
         <tbody>
             {% for article in articles %}
                 <tr>
-                    <td>{{ article }}</td>
-                    <td> <a href="/article/1" class="btn btn-primary">Détails</a></td>
+                    <td>{{ article.designation }}</td>
+                    <td> <a href="/articles/{{ article.id }}" class="btn btn-primary">Détails</a>
+                        <a href="/article/delete/{{ article.id }}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this article?');">Delete</a></td>
                 </tr>
             {% endfor %}
         </tbody>
